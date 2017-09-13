@@ -1,0 +1,14 @@
+extends layout
+
+block content
+  link(href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css", rel="stylesheet")
+  
+  .container
+    .jumbotron
+      h1 Upload page
+      
+      form(action="/form", method="post", enctype="multipart/form-data")
+        .form-group
+          input(type="file", name="file", multiple="multiple")
+        .form-group
+          button.btn.btn-primary(type="submit") Upload
